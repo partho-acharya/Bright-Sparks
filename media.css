@@ -1,0 +1,251 @@
+@media(max-width: 767px) {
+    .textBox h1 {
+        /* HOME */
+        font-size: 40px;
+    }
+
+    .textBox p {
+        font-size: 18px;
+    }
+
+    nav img {
+        width: 200px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    nav.black {
+        height: 70px;
+    }
+
+    .nav-links ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .nav-links ul {
+        padding: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #f44336;
+        border-radius: 20px 0 0 20px;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    nav .fa-solid {
+        display: block;
+        color: white;
+        margin-right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 20px;
+    }
+
+    /*choose*/
+
+    .choose {
+        margin-top: 0;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #4e4c4c;
+            font-weight: 400s;
+        }
+    }
+
+    .chooseCol {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .chooseCol p {
+        font-size: 18px;
+    }
+
+    /*work*/
+
+    .row {
+        flex-direction: column;
+    }
+
+    .imageD img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .work h1 {
+        font-size: 30px;
+    }
+
+    /*beauty*/
+
+    .beauty {
+        display: none;
+    }
+
+    /* facilitiesCol */
+
+    .facilities {
+        padding-top: 50px;
+    }
+
+    .facilitiesCol {
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #4e4c4c;
+            font-weight: 400s;
+        }
+    }
+
+    /* support */
+
+    .supportCol {
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #4e4c4c;
+            font-weight: 400s;
+        }
+    }
+
+    /*cta*/
+
+    .cta {
+        padding: 25px 0;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 15px;
+        }
+    }
+
+    /* home end */
+
+    /* ----------------Subheader all 5 Pages---------------*/
+
+    .sub-header {
+        height: 30vh;
+    }
+
+    .sub-header h1 {
+        font-size: 40px;
+    }
+
+    /* ----------------Subheader end all 5 Pages---------------*/
+
+    /*contact map*/
+
+    .location iframe {
+        height: 250px;
+    }
+
+    /*about spell 145*/
+
+    .aboutContract {
+        flex-direction: column;
+        background: none;
+        margin-left: 50px;
+    }
+    .commentBox {
+        margin: auto;
+    }
+    .commentForm button {
+       color: black;
+    }
+}
+
+
+
+/*footer*/
+
+@media (max-width: 767px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    .section-contact--homepage {
+        width: 80%;
+        padding: 0;
+        min-height: 20rem;
+        bottom: -10rem;
+        z-index: 0;
+    }
+
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-content p {
+        font-size: 14px;
+    }
+
+    .grid-two--cols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-three--cols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footerT {
+        padding-top: 10rem;
+    }
+
+    .contactCol {
+        flex-basis: 100%;
+        margin-left: 50px;
+
+        div {
+            margin: 5px 0;
+        }
+    }
+
+    .footer-1--div {
+        text-align: end;
+        margin-top: 10px;
+        order: 1;
+
+        p {
+            margin: 4px 15px 10px;
+        }
+    }
+
+    .footer-3--div {
+        margin-right: 50px;
+
+        li {
+            margin-top: 5px;
+        }
+    }
+
+    .social-footer--icons {
+        justify-content: end;
+    }
+}
