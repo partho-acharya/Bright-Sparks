@@ -180,6 +180,103 @@ figcaption {
     cursor: not-allowed;
 }
 
+@media (max-width: 767px) {
+    .pagination {
+        margin-top: 10px;
+    }
+
+    .pagination button {
+        padding: 5px 10px;
+        margin: 0 1px;
+    }
+
+    figure {
+        margin: 5px;
+    }
+
+    figcaption {
+        left: 5px;
+        border-radius: 5px;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 1px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .imgBox {
+        width: 98%;
+        height: auto;
+        left: 1%;
+        top: 35%;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            padding: 0;
+            margin-top: 0;
+        }
+    }
+
+    .imgContainer {
+        width: 100%;
+        margin: 10px auto 0;
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        background: none;
+        padding: 0 5px;
+        border-radius: 50px;
+    }
+
+    .caption-box {
+        left: 10%;
+        border-radius: 3px;
+        background-color: rgb(193, 189, 189);
+        color: black;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-gap: 0px;
+    
+        img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+    }
+
+    .imgAllBox {
+        margin-top: 50px;
+    
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    
+        p {
+            font-size: 10px;
+            font-weight: 300;
+            color: #777;
+            line-height: 1.2;
+            padding: 10px;
+        }
+    }
+}
+
+
 /*shop now*/
 
 .shopLeft {
@@ -310,16 +407,17 @@ figcaption {
 .comment {
     display: grid;
     width: 90%;
-    margin: auto;
+    margin:0 auto 50px;
 }
 
 
 .conShop{
-    margin: 50px 0 0 100px;
+    display: grid;
+   margin: 50px 0 0 10px;
 }
 
 .commentBox {
-    width: 80%;
+    width: 90%;
     border: 1px solid #ccc;
     margin-top: 80px;
     padding: 10px 20px;
@@ -345,3 +443,36 @@ figcaption {
     margin: 10px 0;
     color: black;
 }
+
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    /* Adjusting the layout of the product items */
+   
+    .add img {
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+    }
+    .conShop{
+        display: grid;
+       
+       margin-bottom: -200px;
+    }
+
+
+    /* Adjust the comment section */
+    .comment {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactSec {
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+}
+
+

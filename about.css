@@ -64,27 +64,26 @@
 buttonA {
     position: absolute;
     top: 50%;
-    background-color: rgb(209, 202, 202);
-    border-radius: 20px;
     color: #f44336;
     border: none;
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px;
     cursor: pointer;
     transform: translateY(-50%);
 }
 
 buttonA.prev {
-    left: 10px;
+    left: 2px;
 }
 
 buttonA.next {
-    right: 10px;
+    right: 2px;
 }
 
 buttonA:hover {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    border-radius: 30px;
 }
 
 /* ourWork */
@@ -121,7 +120,7 @@ buttonA:hover {
     border-bottom: 5px solid #f44336;
 }
 
-.sliderCon {
+.sliderCon{
     max-width: 1350px;
     position: relative;
 

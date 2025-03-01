@@ -6,7 +6,7 @@ function showMenu() {
 }
 
 function hideMenu() {
-    navLinks.style.right = "-250px";
+    navLinks.style.right = "-190px";
 }
 
 
