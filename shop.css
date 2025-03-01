@@ -447,32 +447,12 @@ figcaption {
 
 /* Media Query for mobile devices */
 @media (max-width: 768px) {
-    /* Adjusting the layout of the product items */
    
-    .add img {
-        height: 300px;
-        width: 100%;
-        background-size: cover;
-    }
     .conShop{
         display: grid;
-       
-       margin-bottom: -200px;
+        width: 80%;
+       margin: 50px auto 10px;
     }
-
-
-    /* Adjust the comment section */
-    .comment {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contactSec {
-        display: flex;
-        flex-direction: column;
-    }
-
- 
 }
 
 
