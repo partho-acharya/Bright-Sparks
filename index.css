@@ -567,7 +567,7 @@ a {
     padding: 0 3.2rem;
     position: relative;
     bottom: -15rem;
-    z-index: -;
+    z-index: -0;
     background-color: var(--white-color);
 
     & .grid {
@@ -628,9 +628,9 @@ a {
     }
 }
 
-/* footer * {
+footer * {
     color: var(--white-color);
-} */
+}
 
 footer .grid {
     text-align: right;
