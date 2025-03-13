@@ -7,7 +7,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Sender's email
-$email_from = 'info@yourwebsite.com';
+$email_from = 'https://partho-acharya.github.io/Bright-Sparks/contactUs.html';
 $email_subject = 'New form submission';
 $email_body = "User Name: $name\n" .
               "User Email: $visitor_email\n" .

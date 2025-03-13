@@ -28,6 +28,10 @@
     }
 }
 
+.aboutMedia{
+    margin: auto 0;
+}
+
 .redBtn {
     margin-top: 20px;
     border: 1px solid #f44336;

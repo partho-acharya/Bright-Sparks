@@ -437,7 +437,7 @@ figcaption {
 }
 
 .facilitiesCol p {
-    padding: 10px;
+    padding: auto 10px;
 }
 
 .facilitiesCol h3 {
