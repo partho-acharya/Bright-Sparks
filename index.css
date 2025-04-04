@@ -537,7 +537,8 @@ a {
         font-size: 1.8rem;
         color: var(--theam-color);
     }
-    .fa-solid{
+
+    .fa-solid {
         background: none;
     }
 }
@@ -548,7 +549,9 @@ a {
     background-color: var(--theme-color);
     cursor: pointer;
     box-shadow: var(--theme-color);
-    a, .fa-solid{
+
+    a,
+    .fa-solid {
         color: white;
     }
 }
@@ -556,8 +559,8 @@ a {
 /*****  contact home Section *****/
 
 .section-contact--homepage {
-    
-    background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(0,191,255,1) 89%);
+
+    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 255, 1) 89%);
     width: 60%;
     min-height: 30rem;
     margin: 0 auto;
@@ -594,7 +597,7 @@ a {
 .section-contact--homepage .fa-solid {
     padding: 0;
     color: var(--theme-color);
-   background: none;
+    background: none;
 }
 
 .section-contact--homepage img {
@@ -643,11 +646,13 @@ footer .grid {
 }
 
 .footer-subheading .bright {
-    color: #00bfff; /* Bright Blue */
+    color: #00bfff;
+    /* Bright Blue */
 }
 
 .footer-subheading .sparks {
-    color: #ff3333; /* Sparks Red */
+    color: #ff3333;
+    /* Sparks Red */
 }
 
 .footer-1--div {
@@ -694,7 +699,7 @@ footer .grid {
 
 /***** End footer Section *****/
 
-.contactCol{
+.contactCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -749,6 +754,65 @@ footer .grid {
     color: #716e6d;
 }
 
+/* whatsapp floot start */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px #999;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-btn.pulse {
+    animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+/* whatsapp floot end */
+
 /***** scrollbar Section *****/
 
 /* width */
@@ -773,4 +837,3 @@ footer .grid {
 }
 
 /***** End scrollbar Section *****/
-
