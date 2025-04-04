@@ -22,6 +22,8 @@ $(window).on("scroll", function () {
 });
 // nav scroll color end
 
+
+
 // whatsapp floot Btn start
 // Add click animation
 const whatsappBtn = document.querySelector('.whatsapp-btn');
