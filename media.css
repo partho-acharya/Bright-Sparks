@@ -172,15 +172,15 @@
 
     /*about spell 145*/
 
-    .aboutUs {
+    /* .aboutUs {
         padding: 0;
-    }
+    } */
 
-    .aboutCol {
+    /* .aboutCol {
         padding: 30px 0;
-    }
+    } */
 
-    buttonA {
+    /* buttonA {
         background: #777;
         border-radius: 10px;
         height: 35px;
@@ -190,7 +190,7 @@
         align-items: center;
         font-size: 30px;
         padding: 0;
-    }
+    } */
 
     .ourWork,
     .aboutCol {
@@ -276,6 +276,62 @@
         color: rgb(168, 28, 28);
     }
 }
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .row {
+      flex-direction: column;
+    }
+    
+    .aboutCol {
+      width: 100%;
+    }
+    
+    .slider-container-wrapper {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .aboutUs {
+      padding: 2rem 1rem;
+    }
+    
+    .slider-container {
+      height: 400px;
+    }
+    
+    .aboutCol {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .slider-container-wrapper {
+      width: 95%;
+    }
+    
+    .slider-container {
+      height: 300px;
+    }
+    
+    buttonA {
+      width: 40px;
+      height: 40px;
+      font-size: 1.1rem;
+    }
+    
+    .aboutCol h2 {
+      font-size: 1.7rem;
+    }
+  }
+
+
 
 
 
