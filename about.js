@@ -29,7 +29,7 @@ function moveSlide(direction) {
 function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         moveSlide(1); // Move slider forward by 1 every 4 seconds
-    }, 3000);
+    }, 2000);
 }
 
 // Stop auto-slide when user interacts (optional, if you add interaction handlers)
@@ -64,9 +64,7 @@ document.querySelector('.slider').addEventListener('mouseleave', startAutoSlide)
 
 
 
-//drag slider bottom
-
-
+//===============================drag slider bottom
 
 const slider1 = document.querySelector(".slider1");
 const firstImg = slider1.querySelectorAll("img")[2];

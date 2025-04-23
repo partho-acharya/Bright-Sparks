@@ -148,3 +148,205 @@ document.getElementById('commentForm').addEventListener('submit', function (even
 });
 
 
+// ==============================================product
+document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('.affiliate-slider');
+    const productCards = document.querySelectorAll('.product-card');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const dotsContainer = document.querySelector('.slider-dots');
+
+    let currentIndex = 0;
+    let cardsToShow = 5;
+    let autoSlideInterval;
+    let isAutoSliding = true;
+    const autoSlideDelay = 5000; // 5 seconds
+
+    // Create dots
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        const dotCount = Math.ceil(productCards.length / cardsToShow);
+
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // Update dots
+    function updateDots() {
+        const dots = document.querySelectorAll('.slider-dot');
+        const activeDotIndex = Math.floor(currentIndex / cardsToShow);
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeDotIndex);
+        });
+    }
+
+    // Go to specific slide
+    function goToSlide(slideIndex) {
+        currentIndex = slideIndex * cardsToShow;
+        updateSlider();
+        resetAutoSlide();
+    }
+
+    // Start auto sliding
+    function startAutoSlide() {
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            if (isAutoSliding) {
+                nextSlide();
+            }
+        }, autoSlideDelay);
+    }
+
+    // Reset auto slide timer
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Pause auto sliding on hover
+    function setupAutoSlidePause() {
+        slider.addEventListener('mouseenter', () => {
+            isAutoSliding = false;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isAutoSliding = true;
+            resetAutoSlide();
+        });
+    }
+
+    // Next slide
+    function nextSlide() {
+        const maxIndex = Math.max(productCards.length - cardsToShow, 0);
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back to start
+        }
+        updateSlider();
+    }
+
+    // Previous slide
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            // Loop to end
+            currentIndex = Math.max(productCards.length - cardsToShow, 0);
+        }
+        updateSlider();
+    }
+
+    function updateSlider() {
+        // Calculate card width based on current responsive setting
+        const card = productCards[0];
+        const cardWidth = card.offsetWidth + parseInt(window.getComputedStyle(card).marginRight);
+
+        // Calculate how many cards to show based on screen width
+        if (window.innerWidth < 576) {
+            cardsToShow = 1;
+        } else if (window.innerWidth < 768) {
+            cardsToShow = 2;
+        } else if (window.innerWidth < 992) {
+            cardsToShow = 3;
+        } else if (window.innerWidth < 1200) {
+            cardsToShow = 4;
+        } else {
+            cardsToShow = 5;
+        }
+
+        // Calculate max index based on visible cards
+        const maxIndex = Math.max(productCards.length - cardsToShow, 0);
+
+        // Ensure currentIndex is within bounds
+        currentIndex = Math.min(currentIndex, maxIndex);
+        currentIndex = Math.max(currentIndex, 0);
+
+        // Move the slider
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+        // Update button states
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+
+        // Update dots
+        updateDots();
+    }
+
+    // Navigation buttons
+    prevBtn.addEventListener('click', function () {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    // Category filtering
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            // Remove active class from all buttons
+            categoryBtns.forEach(b => b.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const category = this.dataset.category;
+
+            // Filter products
+            productCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Reset slider position
+            currentIndex = 0;
+            updateSlider();
+            createDots();
+            resetAutoSlide();
+        });
+    });
+
+    // Track affiliate link clicks
+    document.querySelectorAll('.product-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const url = this.getAttribute('href');
+
+            // Here you would typically send data to your analytics platform
+            console.log('Affiliate link clicked:', url);
+
+            // Redirect after tracking (remove this in production and use actual tracking)
+            setTimeout(() => {
+                window.open(url, '_blank');
+            }, 300);
+        });
+    });
+
+    // Initialize slider and update on resize
+    createDots();
+    updateSlider();
+    startAutoSlide();
+    setupAutoSlidePause();
+    window.addEventListener('resize', function () {
+        updateSlider();
+        createDots();
+    });
+});
+// ==============================================product
+
+

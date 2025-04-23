@@ -6,7 +6,8 @@
 }
 
 .header {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(21, 25, 41, 0.7), rgba(8, 14, 40, 0.7)), url(display/whome2.jpg);
     background-position: center;
@@ -617,6 +618,7 @@ a {
     h5 {
         letter-spacing: 0.1rem;
         font-size: 20px;
+        color: #00bfff;
     }
 
     p,
@@ -631,9 +633,9 @@ a {
     }
 }
 
-footer * {
+/* footer * {
     color: var(--white-color);
-}
+} */
 
 footer .grid {
     text-align: right;
@@ -642,7 +644,7 @@ footer .grid {
 .footer-subheading {
     font-size: 2.2rem;
     font-weight: 700;
-    color: white;
+    color: #00bfff;
 }
 
 .footer-subheading .bright {
@@ -696,7 +698,7 @@ footer .grid {
         text-align: end;
 
         a {
-            color: #f44336;
+            color: white;
 
             &:hover {
                 color: #25d366;
@@ -746,7 +748,7 @@ footer .grid {
     h5 {
         font-size: 18px;
         /* margin-bottom: 5px; */
-        color: white;
+        color: #00bfff;
         font-weight: 400;
     }
 

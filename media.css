@@ -402,10 +402,15 @@
     .footerT {
         padding-top: 10rem;
 
-
         h5 {
             letter-spacing: 0.1rem;
-            font-size: 15px;
+            font-size: 13px;
+            color: #00bfff;
+        }
+
+        h4{
+            font-size: 20px;
+            color: #00bfff; 
         }
 
         p {
@@ -429,12 +434,13 @@
     }
 
     .footer-3--div {
-        border-left: 1px solid #777;
+        border-left: 1px solid #00bfff;
     }
 
     .contactCol {
         flex-basis: 100%;
         margin-left: 0;
+        margin-right: 20px;
         padding-right: 3px;
 
         div {

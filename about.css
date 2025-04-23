@@ -277,7 +277,7 @@
 }
 
 .conbut{
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 /* Slider Styles */
@@ -356,8 +356,8 @@ buttonA:hover {
     padding: 0 35px;
     align-items: center;
     justify-content: center;
-    /* min-height: 35vh; */
-    height: 300px;
+    min-height: 35vh;
+    height: 100%;
     margin: 30px auto;
     background: #f4f4f4;
     border-bottom: 5px solid #f44336;
